@@ -1,0 +1,119 @@
+.contenido {
+  margin: 0px 15%;
+}
+
+.presentacion {
+  text-align: center;
+
+  h1 {
+    font-weight: bold;
+    font-size: 35px;
+
+    .titulo {
+      font-weight: bolder;
+      color: var(--ion-color-primary);
+    }
+
+    .barra {
+      color: var(--ion-color-danger);
+    }
+  }
+
+  p {
+    font-size: 20px;
+
+    .usuario {
+      font-weight: bold;
+      color: var(--ion-color-primary);
+    }
+  }
+
+  h2 {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  /* Estilos para centrar la lista completa */
+  ul {
+    font-size: 20px;
+    text-align: center;
+    /* Centrar el texto dentro de la lista */
+    list-style-position: inside;
+    /* Mover el marcador al interior del contenedor de la lista */
+  }
+}
+
+.requisitos {
+  text-align: center;
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
+
+  ion-col h3 a {
+    color: var(--ion-color-primary);
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  ion-col h3 a:hover {
+    color: var(--ion-color-dark);
+    transition: 0.5s;
+  }
+}
+
+.actualizaciones {
+  text-align: center;
+
+  a {
+    color: var(--ion-color-primary);
+    text-decoration: none;
+    font-weight: 550;
+  }
+
+  a:hover {
+    color: var(--ion-color-dark);
+    transition: 0.5s;
+  }
+
+  .ultimasn {
+    text-align: start;
+    border: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: var(--ion-color-medium);
+    padding: 15px;
+
+    h1 {
+      font-weight: 600;
+      font-size: 30px;
+    }
+
+    ul li {
+      margin: 10px 0px;
+    }
+  }
+
+  .prerequisitos {
+    h3 {
+      font-weight: 600;
+      font-size: 20px;
+    }
+  }
+}
+
+/* Estilos específicos para dispositivos móviles (ejemplo: pantalla menor a 768px de ancho) */
+@media (max-width: 768px) {
+  .contenido {
+    margin: 0px 5%;
+  }
+}
+
+@media (max-width: 576px) {
+  .actualizaciones {
+    .ultimasn {
+      text-align: center;
+    }
+  }
+}

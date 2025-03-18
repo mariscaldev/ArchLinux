@@ -1,0 +1,7 @@
+{
+  "name": "ArchCyberPsycho",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

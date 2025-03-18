@@ -1,0 +1,20 @@
+ion-img {
+    height: 80px;
+    width: 80px;
+}
+
+
+/* Estilos específicos para dispositivos móviles (ejemplo: pantalla menor a 768px de ancho) */
+@media (max-width: 768px) {
+    .footer {
+        .contacto {
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .footer {
+        text-align: center;
+    }
+}

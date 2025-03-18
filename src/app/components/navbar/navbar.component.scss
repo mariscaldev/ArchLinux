@@ -1,0 +1,28 @@
+ion-buttons {
+    margin: 0px 8%;
+
+    ion-button {
+        margin: 0 20px;
+    }
+}
+
+/* Estilos específicos para dispositivos móviles (ejemplo: pantalla menor a 768px de ancho) */
+@media (max-width: 768px) {
+    ion-buttons {
+        margin: 0px 5%;
+
+        ion-button {
+            margin: 0 10px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    ion-buttons {
+        margin: 0px;
+
+        ion-button {
+            margin: 0;
+        }
+    }
+}

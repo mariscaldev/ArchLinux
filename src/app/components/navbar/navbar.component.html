@@ -1,0 +1,10 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons>
+      <ion-title> {{ title }}</ion-title>
+      <ion-button *ngFor="let enlace of enlaces" (click)="navegar(enlace.ruta)">
+        {{ enlace.nombre }}
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>

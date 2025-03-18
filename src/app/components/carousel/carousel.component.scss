@@ -1,0 +1,33 @@
+/* Estilos para el swiper-container (carrusel) */
+swiper-container {
+    height: 350px;
+    /* Altura deseada del carrusel en píxeles */
+}
+
+
+/* Estilos para los swiper-slide (slides del carrusel) */
+swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* Ocupar toda la altura del slide */
+}
+
+/* Estilos para la imagen dentro de cada slide */
+ion-img {
+    width: 100%;
+    /* Ocupar todo el ancho del contenedor del slide */
+    height: 100%;
+    /* Ocupar toda la altura del contenedor del slide */
+    object-fit: cover;
+    /* Mantener la proporción de la imagen y recortar según sea necesario */
+}
+
+/* Estilos específicos para dispositivos móviles (ejemplo: pantalla menor a 768px de ancho) */
+@media (max-width: 768px) {
+    swiper-container {
+        height: 160px;
+        /* Altura reducida para dispositivos móviles */
+    }
+}

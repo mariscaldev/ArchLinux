@@ -1,0 +1,85 @@
+<!-- NavBar Component -->
+<app-navbar></app-navbar>
+<ion-content>
+    <!-- Carousel component -->
+    <app-carousel></app-carousel>
+
+    <div class="contenido">
+        <!-- Presentación -->
+        <div class="presentacion">
+            <br /><br />
+            <h1>
+                Bienvenidos a <span class="titulo">Arch Linux</span>
+                <span class="barra"> | </span>Blog
+            </h1>
+            <p>
+                ¡Hola! Mi nombre es <span class="usuario"> {{ usuario }} </span>, y
+                estoy encantado de darte la bienvenida a este espacio dedicado a Arch
+                Linux. <br />Aquí encontrarás una guía completa para aprovechar al
+                máximo este sistema operativo ágil y eficiente, junto con consejos
+                avanzados de personalización para adaptarlo a tus necesidades.
+            </p>
+            <br />
+
+            <h2>¿Qué podrás descubrir en este blog?</h2>
+            <ul>
+                <li>Descarga de la última versión de Arch Linux.</li>
+                <li>
+                    Una detallada guía paso a paso para la instalación de Arch Linux.
+                </li>
+                <li>
+                    Consejos expertos y trucos para personalizar y optimizar tu sistema.
+                </li>
+            </ul>
+            <br />
+
+            <p>
+                Explora y sumérgete en la experiencia de utilizar Arch Linux. Desde la
+                instalación inicial hasta la configuración avanzada, este blog está
+                diseñado para ayudarte a dominar tu sistema operativo y hacerlo
+                totalmente tuyo.
+            </p>
+        </div><br>
+
+        <!-- CARDS DE REQUISITOS -->
+        <ion-grid class="requisitos">
+            <ion-row>
+                <ion-col size-md="4">
+                    <img src="../../assets/icon/descargar.png" alt="Descarga" />
+                    <h3><a href="https://archlinux.org/download/">Descargar</a></h3>
+                </ion-col>
+                <ion-col size-md="4">
+                    <img src="../../assets/icon/instalar.png" alt="Instalacion" />
+                    <h3><a href="/articles/install">Instalación</a></h3>
+                </ion-col>
+                <ion-col size-md="4">
+                    <img src="../../assets/icon/articulo.png" alt="Articulos" />
+                    <h3><a href="/articles">Articulos</a></h3>
+                </ion-col>
+            </ion-row> </ion-grid><br />
+
+        <!--  -->
+        <ion-grid class="actualizaciones">
+            <ion-row>
+                <ion-col class="ultimasn" size="12" sizeSm="8">
+                    <h1>Ultimos articulos:</h1>
+                    <ul>
+                        <li><a href="/articles/grub-custom">Instalacion de themes Grub</a></li>
+                        <li><a href="/articles/polybar">Barra de Estado Polybar</a></li>
+                        <li><a href="/articles/bspwm">Gestor de ventanas BSPWM</a></li>
+                        <li><a href="/articles/lightdm">Instalacion de Lightdm</a></li>
+                    </ul>
+                </ion-col>
+                <ion-col class="prerequisitos" size="12" sizeSm="4">
+                    <h3>Pre-requisitos</h3>
+                    <p>Descargar ISO de <span><a href="https://archlinux.org/download/">Arch Linux</a></span></p>
+                    <p><span><a href="/articles/install">Instalación</a></span> de Arch Linux</p>
+                    <p>Revisar los <span><a href="/articles">Articulos</a></span></p>
+                </ion-col>
+            </ion-row>
+        </ion-grid><br><br>
+    </div>
+
+    <!-- Footer -->
+    <app-footer></app-footer>
+</ion-content>
