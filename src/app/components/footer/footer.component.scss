@@ -1,20 +1,27 @@
-ion-img {
-    height: 80px;
-    width: 80px;
-}
-
-
-/* Estilos específicos para dispositivos móviles (ejemplo: pantalla menor a 768px de ancho) */
-@media (max-width: 768px) {
-    .footer {
-        .contacto {
-            text-align: center;
-        }
-    }
-}
-
-@media (max-width: 576px) {
-    .footer {
-        text-align: center;
-    }
-}
+.footer {
+    padding: 15px 0;
+    text-align: center;
+  }
+  
+  .social-icons {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .social-icons ion-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .social-icons a {
+    color: white;
+    font-size: 28px;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    transform: scale(1.2);
+    color: #4DA4FF;
+  }
+  
