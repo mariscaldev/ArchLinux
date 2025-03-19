@@ -18,3 +18,10 @@ code {
     font-weight: bolder;
     color: #ff2e2e;
 }
+
+/* Estilos específicos para dispositivos móviles (ejemplo: pantalla menor a 768px de ancho) */
+@media (max-width: 768px) {
+    .body {
+        margin: 0px 5%;
+    }
+}

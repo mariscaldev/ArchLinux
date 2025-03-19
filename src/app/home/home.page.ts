@@ -6,7 +6,8 @@ import { Component, ViewChild } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  usuario = 'CyberPsychoT';
+  //usuario = 'CyberPsychoT';
+  usuario = 'MariscalDev';
   constructor() {}
 
   ngOnInit() {}
