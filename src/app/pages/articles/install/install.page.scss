@@ -9,7 +9,7 @@ h1, h2, h3 {
 pre {
     background: #111010;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 0 10px;
     overflow-x: auto;
 }
 code {
@@ -17,6 +17,33 @@ code {
     font-family: "Courier New", Courier, monospace;
     font-weight: bolder;
     color: #ff2e2e;
+}
+
+.shortcuts {
+    padding: 0 0 0 4rem;
+  
+  .section {
+    margin-bottom: 2rem;
+  }
+  .section-title {
+    display: block;
+    margin: 0 auto 1rem;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  table th, table td {
+    border: 1px solid #ccc;
+    padding: 0.5rem;
+    text-align: left;
+  }
+  table kbd {
+    background: #f0f0f0;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: monospace;
+  }
 }
 
 /* Estilos específicos para dispositivos móviles (ejemplo: pantalla menor a 768px de ancho) */
