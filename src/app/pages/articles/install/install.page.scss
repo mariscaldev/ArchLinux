@@ -2,7 +2,6 @@
   font-family: Arial, sans-serif;
   margin: 30px 100px;
   line-height: 1.6;
-  text-align: justify;
 }
 
 h1,
@@ -102,5 +101,8 @@ code {
 @media (max-width: 768px) {
   .body {
     margin: 0px 5%;
+    .shortcuts {
+      padding: 0;
+    }
   }
 }
