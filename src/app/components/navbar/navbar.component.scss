@@ -1,28 +1,77 @@
-ion-buttons {
-    margin: 0px 8%;
-
-    ion-button {
-        margin: 0 20px;
-    }
+.sticky-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-/* Estilos específicos para dispositivos móviles (ejemplo: pantalla menor a 768px de ancho) */
+.navbar-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding-left: 16px;
+}
+
+.navbar-buttons {
+  margin-right: 5%;
+
+  ion-button {
+    margin: 0 10px;
+    font-weight: 500;
+
+    ion-icon {
+      margin-right: 6px;
+    }
+  }
+}
+
+.menu-button {
+  display: none;
+}
+
+/* Clase para resaltar la opción activa */
+ion-button.activo,
+ion-item.activo {
+  background: var(--ion-color-primary);
+  color: white;
+
+  ion-icon {
+    color: white;
+  }
+}
+
+/* Aplicar el color en modo nativo de ion-item */
+ion-item.activo::part(native) {
+  background: var(--ion-color-primary) !important;
+  color: white;
+}
+
+/* Efecto de fade-in para el menú */
+.fade-in {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-    ion-buttons {
-        margin: 0px 5%;
+  .navbar-buttons {
+    display: none;
+  }
 
-        ion-button {
-            margin: 0 10px;
-        }
-    }
-}
+  .menu-button {
+    display: flex;
+    margin-right: 16px;
+  }
 
-@media (max-width: 576px) {
-    ion-buttons {
-        margin: 0px;
-
-        ion-button {
-            margin: 0;
-        }
-    }
+  .navbar-title {
+    font-size: 1.1rem;
+  }
 }

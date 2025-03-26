@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, HostListener } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
+import { MenuController } from '@ionic/angular';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-navbar',
@@ -8,19 +10,47 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
   title: string = 'ArchLinux';
+  mostrarMenuResponsive: boolean = false;
+  rutaActual: string = '';
 
-  // Agregar las rutas.
-  enlaces: { nombre: string; ruta: string }[] = [
-    { nombre: 'Inicio', ruta: '/home' },
-    { nombre: 'Artículos', ruta: '/articles' },
+  enlaces: { nombre: string; ruta: string; icono: string }[] = [
+    { nombre: 'Inicio', ruta: '/home', icono: 'home-outline' },
+    { nombre: 'Artículos', ruta: '/articles', icono: 'book-outline' },
   ];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private menuCtrl: MenuController) {
+    // Escuchar cambios en la ruta
+    this.router.events.pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe((event: any) => {
+        this.rutaActual = event.urlAfterRedirects;
+      });
+  }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.checkScreenSize();
+    this.rutaActual = this.router.url; // Establecer valor inicial
+  }
 
-  // Navegacion de las rutas
+  @HostListener('window:resize', [])
+  onResize() {
+    this.checkScreenSize();
+  }
+
+  checkScreenSize() {
+    this.mostrarMenuResponsive = window.innerWidth <= 768;
+  }
+
   navegar(ruta: string) {
     this.router.navigate([ruta]);
+  }
+
+  navegarCerrarMenu(ruta: string) {
+    this.router.navigate([ruta]).then(() => {
+      this.menuCtrl.close('customMenu');
+    });
+  }
+
+  esRutaActiva(ruta: string): boolean {
+    return this.rutaActual === ruta;
   }
 }

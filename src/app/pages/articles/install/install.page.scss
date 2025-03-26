@@ -27,6 +27,25 @@ code {
 .shortcuts {
   padding: 0 0 0 2rem;
 
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    height: 0;
+    border: 4px;
+    border-style: inset;
+    border-color: #007bff;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
   .shortcut-category {
     margin: 0rem 0 1.5rem;
     padding: 0.75rem 1.25rem;

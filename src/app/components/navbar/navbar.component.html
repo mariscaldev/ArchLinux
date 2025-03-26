@@ -1,10 +1,40 @@
-<ion-header>
+<ion-header class="sticky-navbar">
   <ion-toolbar color="dark">
-    <ion-buttons>
-      <ion-title> {{ title }}</ion-title>
-      <ion-button *ngFor="let enlace of enlaces" (click)="navegar(enlace.ruta)">
+    <ion-title class="navbar-title">
+      {{ title }}
+    </ion-title>
+
+    <ion-buttons slot="end" class="navbar-buttons" *ngIf="!mostrarMenuResponsive">
+      <ion-button *ngFor="let enlace of enlaces" (click)="navegar(enlace.ruta)"
+        [class.activo]="esRutaActiva(enlace.ruta)">
+        <ion-icon [name]="enlace.icono" slot="start"></ion-icon>
         {{ enlace.nombre }}
       </ion-button>
+
+    </ion-buttons>
+
+    <!-- Botón hamburguesa -->
+    <ion-buttons slot="end" class="menu-button" *ngIf="mostrarMenuResponsive">
+      <ion-menu-button autoHide="false"></ion-menu-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
+<!-- Menú lateral para móviles -->
+<ion-menu side="end" menuId="customMenu" contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="dark">
+      <ion-title>Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list class="fade-in">
+      <ion-item button *ngFor="let enlace of enlaces" (click)="navegarCerrarMenu(enlace.ruta)"
+        [class.activo]="esRutaActiva(enlace.ruta)">
+        <ion-icon [name]="enlace.icono" slot="start"></ion-icon>
+        <ion-label>{{ enlace.nombre }}</ion-label>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-menu>
