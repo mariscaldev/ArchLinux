@@ -4,7 +4,7 @@
   <div class="body">
     <ion-grid>
       <ion-row>
-        <ion-col size="12" size-md="7">
+        <ion-col size="12" size-md="6">
           <h1>Guía de Instalación de Arch Linux y Hyprland</h1>
           <p>
             Bienvenido a esta guía paso a paso para instalar Arch Linux y
@@ -84,9 +84,7 @@
           <h3>2.6 Instalación de Hyde (Tema Visual para Hyprland)</h3>
           <p>
             Abre Firefox e ingresa a
-            <a href="https://github.com/Hyde-project/hyde"
-              >Repositorio de Hyde</a
-            >.
+            <a href="https://github.com/Hyde-project/hyde">Repositorio de Hyde</a>.
           </p>
           <pre><code>sudo pacman -S --needed git base-devel unzip</code></pre>
           <p>Descarga y descomprime el archivo ZIP:</p>
@@ -109,537 +107,746 @@
           </p>
         </ion-col>
 
-        <ion-col size="12" size-md="5" class="shortcuts">
-          <div class="section">
-            <h1>Accesos directos de Hyprland</h1>
-            <table>
-              <tr>
-                <th>Teclas</th>
-                <th>Acción</th>
-              </tr>
-              <tr>
-                <td><kbd>CTRL</kbd> + <kbd>Q</kbd></td>
-                <td>Cerrar ventana enfocada</td>
-              </tr>
-              <tr>
-                <td><kbd>ALT</kbd> + <kbd>F4</kbd></td>
-                <td>Cerrar ventana enfocada</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>Delete</kbd></td>
-                <td>Finalizar sesión de Hyprland</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>W</kbd></td>
-                <td>Alternar modo flotante</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>G</kbd></td>
-                <td>Alternar grupo de ventanas</td>
-              </tr>
-              <tr>
-                <td><kbd>Shift</kbd> + <kbd>F11</kbd></td>
-                <td>Alternar pantalla completa</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>L</kbd></td>
-                <td>Bloquear pantalla</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>F</kbd></td>
-                <td>Fijar/desfijar ventana enfocada</td>
-              </tr>
-              <tr>
-                <td><kbd>ALT</kbd> + <kbd>CTRL</kbd> + <kbd>Delete</kbd></td>
-                <td>Abrir menú de cierre de sesión</td>
-              </tr>
-              <tr>
-                <td><kbd>ALT</kbd> + <kbd>Control_R</kbd></td>
-                <td>Alternar Waybar y recargar configuración</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>J</kbd></td>
-                <td>Alternar división</td>
-              </tr>
-            </table>
-          </div>
+        <ion-col size="12" size-md="6" class="shortcuts">
+          <h1>Accesos directos de Hyprland</h1>
+          <ion-accordion-group expand="insetdwe"> <!-- o "multiple" si quieres abrir varios a la vez -->
 
-          <div class="section">
-            <h1>Navegación entre Grupos</h1>
-            <table>
-              <tr>
-                <th>Teclas</th>
-                <th>Acción</th>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>CTRL</kbd> + <kbd>H</kbd></td>
-                <td>cambiar al grupo anterior</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>CTRL</kbd> + <kbd>L</kbd></td>
-                <td>cambiar al siguiente grupo</td>
-              </tr>
-            </table>
-          </div>
-          
-          <div class="section">
-            <h1>Cambiar el Foco</h1>
-            <table>
-              <tr>
-                <th>Teclas</th>
-                <th>Acción</th>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>Izquierda</kbd></td>
-                <td>mover el foco a la izquierda</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>Derecha</kbd></td>
-                <td>mover el foco a la derecha</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>Arriba</kbd></td>
-                <td>mover el foco hacia arriba</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>Abajo</kbd></td>
-                <td>mover el foco hacia abajo</td>
-              </tr>
-            </table>
-          </div>
-          
-          <div class="section">
-            <h1>Redimensionar Ventana Activa</h1>
-            <table>
-              <tr>
-                <th>Teclas</th>
-                <th>Acción</th>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>Derecha</kbd></td>
-                <td>redimensionar ventana hacia la derecha</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>Izquierda</kbd></td>
-                <td>redimensionar ventana hacia la izquierda</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>Arriba</kbd></td>
-                <td>redimensionar ventana hacia arriba</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>Abajo</kbd></td>
-                <td>redimensionar ventana hacia abajo</td>
-              </tr>
-            </table>
-          </div>
-          
-          <div class="section">
-            <h1>Mover y Redimensionar con el Ratón</h1>
-            <table>
-              <tr>
-                <th>Teclas</th>
-                <th>Acción</th>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>mouse:272</kbd></td>
-                <td>mantener para mover la ventana</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>mouse:273</kbd></td>
-                <td>mantener para redimensionar la ventana</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>Z</kbd></td>
-                <td>mantener para mover la ventana</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>X</kbd></td>
-                <td>mantener para redimensionar la ventana</td>
-              </tr>
-            </table>
-          </div>
-          
-          <div class="section">
-            <h1>Mover Ventana Activa</h1>
-            <table>
-              <tr>
-                <th>Teclas</th>
-                <th>Acción</th>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>Izquierda</kbd></td>
-                <td>mover ventana activa a la izquierda</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>Derecha</kbd></td>
-                <td>mover ventana activa a la derecha</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>Arriba</kbd></td>
-                <td>mover ventana activa hacia arriba</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>Abajo</kbd></td>
-                <td>mover ventana activa hacia abajo</td>
-              </tr>
-            </table>
-          </div>
-          
+            <div class="shortcut-category">
+              <h2>Gestión de Ventanas</h2>
+            </div>
 
-          <div class="section">
-            <h1>Aplicaciones</h1>
-            <table>
-              <tr>
-                <th>Teclas</th>
-                <th>Acción</th>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>T</kbd></td>
-                <td>emulador de terminal</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>E</kbd></td>
-                <td>explorador de archivos</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>C</kbd></td>
-                <td>editor de texto</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>B</kbd></td>
-                <td>navegador web</td>
-              </tr>
-              <tr>
-                <td><kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>Escape</kbd></td>
-                <td>monitor del sistema</td>
-              </tr>
-            </table>
-          </div>
-          
-          <div class="section">
-            <h1>Menús de Rofi</h1>
-            <table>
-              <tr>
-                <th>Teclas</th>
-                <th>Acción</th>
-              </tr>
-              <tr>
-                <td><kbd>ALT</kbd> + <kbd>Espacio</kbd></td>
-                <td>buscador de aplicaciones</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>TAB</kbd></td>
-                <td>cambiador de ventanas</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>E</kbd></td>
-                <td>buscador de archivos</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>/</kbd></td>
-                <td>ver atajos de teclado</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>,</kbd></td>
-                <td>selector de emojis</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>.</kbd></td>
-                <td>selector de glifos</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>V</kbd></td>
-                <td>portapapeles</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>V</kbd></td>
-                <td>gestor de portapapeles</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>A</kbd></td>
-                <td>selector de lanzadores Rofi</td>
-              </tr>
-            </table>
-          </div>
-          
-          <div class="section">
-            <h1>Audio</h1>
-            <table>
-              <tr>
-                <th>Teclas</th>
-                <th>Acción</th>
-              </tr>
-              <tr>
-                <td><kbd>F10</kbd> / <kbd>XF86AudioMute</kbd></td>
-                <td>activar/desactivar silencio de salida</td>
-              </tr>
-              <tr>
-                <td><kbd>F11</kbd> / <kbd>XF86AudioLowerVolume</kbd></td>
-                <td>bajar volumen</td>
-              </tr>
-              <tr>
-                <td><kbd>F12</kbd> / <kbd>XF86AudioRaiseVolume</kbd></td>
-                <td>subir volumen</td>
-              </tr>
-              <tr>
-                <td><kbd>XF86AudioMicMute</kbd></td>
-                <td>activar/desactivar silencio del micrófono</td>
-              </tr>
-            </table>
-          </div>
-          
-          <div class="section">
-            <h1>Multimedia</h1>
-            <table>
-              <tr>
-                <th>Teclas</th>
-                <th>Acción</th>
-              </tr>
-              <tr>
-                <td><kbd>XF86AudioPlay</kbd></td>
-                <td>reproducir</td>
-              </tr>
-              <tr>
-                <td><kbd>XF86AudioPause</kbd></td>
-                <td>pausar</td>
-              </tr>
-              <tr>
-                <td><kbd>XF86AudioNext</kbd></td>
-                <td>siguiente pista</td>
-              </tr>
-              <tr>
-                <td><kbd>XF86AudioPrev</kbd></td>
-                <td>pista anterior</td>
-              </tr>
-            </table>
-          </div>
-          
-          <div class="section">
-            <h1>Brillo</h1>
-            <table>
-              <tr>
-                <th>Teclas</th>
-                <th>Acción</th>
-              </tr>
-              <tr>
-                <td><kbd>XF86MonBrightnessUp</kbd></td>
-                <td>aumentar brillo</td>
-              </tr>
-              <tr>
-                <td><kbd>XF86MonBrightnessDown</kbd></td>
-                <td>disminuir brillo</td>
-              </tr>
-            </table>
-          </div>
-          
-          <div class="section">
-            <h1>Otras Funciones</h1>
-            <table>
-              <tr>
-                <th>Teclas</th>
-                <th>Acción</th>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>K</kbd></td>
-                <td>cambiar distribución del teclado</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>G</kbd></td>
-                <td>modo juego</td>
-              </tr>
-            </table>
-          </div>
-          
-          <div class="section">
-            <h1>Captura de Pantalla</h1>
-            <table>
-              <tr>
-                <th>Teclas</th>
-                <th>Acción</th>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>P</kbd></td>
-                <td>selector de color</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>P</kbd></td>
-                <td>captura de pantalla</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>CTRL</kbd> + <kbd>P</kbd></td>
-                <td>congelar y capturar pantalla</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>P</kbd></td>
-                <td>imprimir monitor</td>
-              </tr>
-              <tr>
-                <td><kbd>Print</kbd></td>
-                <td>capturar todos los monitores</td>
-              </tr>
-            </table>
-          </div>
-          
-          <div class="section">
-            <h1>Fondos y Estilos</h1>
-            <table>
-              <tr>
-                <th>Teclas</th>
-                <th>Acción</th>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>Derecha</kbd></td>
-                <td>fondo siguiente</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>Izquierda</kbd></td>
-                <td>fondo anterior</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>W</kbd></td>
-                <td>seleccionar fondo</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>Arriba</kbd></td>
-                <td>siguiente diseño de Waybar</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>Abajo</kbd></td>
-                <td>diseño anterior de Waybar</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>R</kbd></td>
-                <td>selector de modo Wallbash</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>T</kbd></td>
-                <td>seleccionar tema</td>
-              </tr>
-            </table>
-          </div>
-          
-          <div class="section">
-            <h1>Navegación entre Espacios de Trabajo</h1>
-            <table>
-              <tr>
-                <th>Teclas</th>
-                <th>Acción</th>
-              </tr>
-              <tr><td><kbd>SUPER</kbd> + <kbd>1</kbd></td><td>ir al espacio de trabajo 1</td></tr>
-              <tr><td><kbd>SUPER</kbd> + <kbd>2</kbd></td><td>ir al espacio de trabajo 2</td></tr>
-              <tr><td><kbd>SUPER</kbd> + <kbd>3</kbd></td><td>ir al espacio de trabajo 3</td></tr>
-              <tr><td><kbd>SUPER</kbd> + <kbd>4</kbd></td><td>ir al espacio de trabajo 4</td></tr>
-              <tr><td><kbd>SUPER</kbd> + <kbd>5</kbd></td><td>ir al espacio de trabajo 5</td></tr>
-              <tr><td><kbd>SUPER</kbd> + <kbd>6</kbd></td><td>ir al espacio de trabajo 6</td></tr>
-              <tr><td><kbd>SUPER</kbd> + <kbd>7</kbd></td><td>ir al espacio de trabajo 7</td></tr>
-              <tr><td><kbd>SUPER</kbd> + <kbd>8</kbd></td><td>ir al espacio de trabajo 8</td></tr>
-              <tr><td><kbd>SUPER</kbd> + <kbd>9</kbd></td><td>ir al espacio de trabajo 9</td></tr>
-              <tr><td><kbd>SUPER</kbd> + <kbd>0</kbd></td><td>ir al espacio de trabajo 10</td></tr>
-              <tr><td><kbd>SUPER</kbd> + <kbd>CTRL</kbd> + <kbd>Abajo</kbd></td><td>ir al espacio de trabajo vacío más cercano</td></tr>
-              <tr><td><kbd>SUPER</kbd> + <kbd>mouse_down</kbd></td><td>ir al siguiente espacio de trabajo</td></tr>
-              <tr><td><kbd>SUPER</kbd> + <kbd>mouse_up</kbd></td><td>ir al espacio de trabajo anterior</td></tr>
-            </table>
-          </div>
-          
-          <div class="section">
-            <h1>Espacios de Trabajo Relativos</h1>
-            <table>
-              <tr>
-                <th>Teclas</th>
-                <th>Acción</th>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>CTRL</kbd> + <kbd>Derecha</kbd></td>
-                <td>cambiar al siguiente espacio de trabajo</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>CTRL</kbd> + <kbd>Izquierda</kbd></td>
-                <td>cambiar al espacio de trabajo anterior</td>
-              </tr>
-            </table>
-          </div>
-          
-          <div class="section">
-            <h1>Espacio de Trabajo Especial</h1>
-            <table>
-              <tr>
-                <th>Teclas</th>
-                <th>Acción</th>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>S</kbd></td>
-                <td>mover al espacio de trabajo especial (scratchpad)</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>S</kbd></td>
-                <td>mover al scratchpad (modo silencioso)</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>S</kbd></td>
-                <td>mostrar/ocultar scratchpad</td>
-              </tr>
-            </table>
-          </div>
-          
-          <div class="section">
-            <h1>Mover Ventana Silenciosamente</h1>
-            <table>
-              <tr>
-                <th>Teclas</th>
-                <th>Acción</th>
-              </tr>
-              <tr><td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>1</kbd></td><td>mover al espacio de trabajo 1 (silencioso)</td></tr>
-              <tr><td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>2</kbd></td><td>mover al espacio de trabajo 2 (silencioso)</td></tr>
-              <tr><td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>3</kbd></td><td>mover al espacio de trabajo 3 (silencioso)</td></tr>
-              <tr><td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>4</kbd></td><td>mover al espacio de trabajo 4 (silencioso)</td></tr>
-              <tr><td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>5</kbd></td><td>mover al espacio de trabajo 5 (silencioso)</td></tr>
-              <tr><td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>6</kbd></td><td>mover al espacio de trabajo 6 (silencioso)</td></tr>
-              <tr><td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>7</kbd></td><td>mover al espacio de trabajo 7 (silencioso)</td></tr>
-              <tr><td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>8</kbd></td><td>mover al espacio de trabajo 8 (silencioso)</td></tr>
-              <tr><td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>9</kbd></td><td>mover al espacio de trabajo 9 (silencioso)</td></tr>
-              <tr><td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>0</kbd></td><td>mover al espacio de trabajo 10 (silencioso)</td></tr>
-            </table>
-          </div>
-          
-          <div class="section">
-            <h1>Mover Ventana a un Espacio de Trabajo</h1>
-            <table>
-              <tr>
-                <th>Teclas</th>
-                <th>Acción</th>
-              </tr>
-              <tr><td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>1</kbd></td><td>mover al espacio de trabajo 1</td></tr>
-              <tr><td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>2</kbd></td><td>mover al espacio de trabajo 2</td></tr>
-              <tr><td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>3</kbd></td><td>mover al espacio de trabajo 3</td></tr>
-              <tr><td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>4</kbd></td><td>mover al espacio de trabajo 4</td></tr>
-              <tr><td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>5</kbd></td><td>mover al espacio de trabajo 5</td></tr>
-              <tr><td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>6</kbd></td><td>mover al espacio de trabajo 6</td></tr>
-              <tr><td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>7</kbd></td><td>mover al espacio de trabajo 7</td></tr>
-              <tr><td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>8</kbd></td><td>mover al espacio de trabajo 8</td></tr>
-              <tr><td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>9</kbd></td><td>mover al espacio de trabajo 9</td></tr>
-              <tr><td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>0</kbd></td><td>mover al espacio de trabajo 10</td></tr>
-            </table>
-          </div>
-          
-          <div class="section">
-            <h1>Mover Ventana a Espacios Relativos</h1>
-            <table>
-              <tr>
-                <th>Teclas</th>
-                <th>Acción</th>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>CTRL</kbd> + <kbd>Derecha</kbd></td>
-                <td>mover ventana al siguiente espacio relativo</td>
-              </tr>
-              <tr>
-                <td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>CTRL</kbd> + <kbd>Izquierda</kbd></td>
-                <td>mover ventana al espacio relativo anterior</td>
-              </tr>
-            </table>
-          </div>
-          
+            <ion-accordion value="hyprland">
+              <ion-item slot="header" color="light">
+                <ion-label>Gestor de Ventanas</ion-label>
+              </ion-item>
+              <div class="section" slot="content">
+                <table>
+                  <tr>
+                    <th>Teclas</th>
+                    <th>Acción</th>
+                  </tr>
+                  <tr>
+                    <td><kbd>CTRL</kbd> + <kbd>Q</kbd></td>
+                    <td>Cerrar ventana enfocada</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>ALT</kbd> + <kbd>F4</kbd></td>
+                    <td>Cerrar ventana enfocada</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>Delete</kbd></td>
+                    <td>Finalizar sesión de Hyprland</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>W</kbd></td>
+                    <td>Alternar modo flotante</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>G</kbd></td>
+                    <td>Alternar grupo de ventanas</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>Shift</kbd> + <kbd>F11</kbd></td>
+                    <td>Alternar pantalla completa</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>L</kbd></td>
+                    <td>Bloquear pantalla</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>F</kbd></td>
+                    <td>Fijar/desfijar ventana enfocada</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>ALT</kbd> + <kbd>CTRL</kbd> + <kbd>Delete</kbd></td>
+                    <td>Abrir menú de cierre de sesión</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>ALT</kbd> + <kbd>Control_R</kbd></td>
+                    <td>Alternar Waybar y recargar configuración</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>J</kbd></td>
+                    <td>Alternar división</td>
+                  </tr>
+                </table>
+              </div>
+            </ion-accordion>
+
+            <ion-accordion value="grupos">
+              <ion-item slot="header" color="light">
+                <ion-label>Navegación entre grupos</ion-label>
+              </ion-item>
+              <div class="section" slot="content">
+                <table>
+                  <tr>
+                    <th>Teclas</th>
+                    <th>Acción</th>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>CTRL</kbd> + <kbd>H</kbd></td>
+                    <td>cambiar al grupo anterior</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>CTRL</kbd> + <kbd>L</kbd></td>
+                    <td>cambiar al siguiente grupo</td>
+                  </tr>
+                </table>
+              </div>
+            </ion-accordion>
+
+            <ion-accordion value="foco">
+              <ion-item slot="header" color="light">
+                <ion-label>Cambiar el Foco</ion-label>
+              </ion-item>
+              <div class="section" slot="content">
+                <table>
+                  <tr>
+                    <th>Teclas</th>
+                    <th>Acción</th>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>Izquierda</kbd></td>
+                    <td>mover el foco a la izquierda</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>Derecha</kbd></td>
+                    <td>mover el foco a la derecha</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>Arriba</kbd></td>
+                    <td>mover el foco hacia arriba</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>Abajo</kbd></td>
+                    <td>mover el foco hacia abajo</td>
+                  </tr>
+                </table>
+              </div>
+            </ion-accordion>
+
+            <ion-accordion value="red_ventana_activa">
+              <ion-item slot="header" color="light">
+                <ion-label>Redimensionar Ventana Activa</ion-label>
+              </ion-item>
+              <div class="section" slot="content">
+                <table>
+                  <tr>
+                    <th>Teclas</th>
+                    <th>Acción</th>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>Derecha</kbd></td>
+                    <td>redimensionar ventana hacia la derecha</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>Izquierda</kbd></td>
+                    <td>redimensionar ventana hacia la izquierda</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>Arriba</kbd></td>
+                    <td>redimensionar ventana hacia arriba</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>Abajo</kbd></td>
+                    <td>redimensionar ventana hacia abajo</td>
+                  </tr>
+                </table>
+              </div>
+            </ion-accordion>
+
+            <ion-accordion value="raton">
+              <ion-item slot="header" color="light">
+                <ion-label>Mover y Redimensionar con el Ratón</ion-label>
+              </ion-item>
+              <div class="section" slot="content">
+                <table>
+                  <tr>
+                    <th>Teclas</th>
+                    <th>Acción</th>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>mouse:272</kbd></td>
+                    <td>mantener para mover la ventana</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>mouse:273</kbd></td>
+                    <td>mantener para redimensionar la ventana</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>Z</kbd></td>
+                    <td>mantener para mover la ventana</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>X</kbd></td>
+                    <td>mantener para redimensionar la ventana</td>
+                  </tr>
+                </table>
+              </div>
+            </ion-accordion>
+
+            <div class="shortcut-category">
+              <h2>Otros</h2>
+            </div>
+
+            <ion-accordion value="mov_ventana_activa">
+              <ion-item slot="header" color="light">
+                <ion-label>Mover Ventana Activa</ion-label>
+              </ion-item>
+              <div class="section" slot="content">
+                <table>
+                  <tr>
+                    <th>Teclas</th>
+                    <th>Acción</th>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>Izquierda</kbd></td>
+                    <td>mover ventana activa a la izquierda</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>Derecha</kbd></td>
+                    <td>mover ventana activa a la derecha</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>Arriba</kbd></td>
+                    <td>mover ventana activa hacia arriba</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>Abajo</kbd></td>
+                    <td>mover ventana activa hacia abajo</td>
+                  </tr>
+                </table>
+              </div>
+            </ion-accordion>
+
+            <div class="shortcut-category">
+              <h2>Lanzador</h2>
+            </div>
+
+            <ion-accordion value="apps">
+              <ion-item slot="header" color="light">
+                <ion-label>Aplicaciones</ion-label>
+              </ion-item>
+              <div class="section" slot="content">
+                <table>
+                  <tr>
+                    <th>Teclas</th>
+                    <th>Acción</th>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>T</kbd></td>
+                    <td>emulador de terminal</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>E</kbd></td>
+                    <td>explorador de archivos</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>C</kbd></td>
+                    <td>editor de texto</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>B</kbd></td>
+                    <td>navegador web</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>Escape</kbd></td>
+                    <td>monitor del sistema</td>
+                  </tr>
+                </table>
+              </div>
+            </ion-accordion>
+
+            <ion-accordion value="rofiº">
+              <ion-item slot="header" color="light">
+                <ion-label>Menú de Rofi</ion-label>
+              </ion-item>
+              <div class="section" slot="content">
+                <table>
+                  <tr>
+                    <th>Teclas</th>
+                    <th>Acción</th>
+                  </tr>
+                  <tr>
+                    <td><kbd>ALT</kbd> + <kbd>Espacio</kbd></td>
+                    <td>buscador de aplicaciones</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>TAB</kbd></td>
+                    <td>cambiador de ventanas</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>E</kbd></td>
+                    <td>buscador de archivos</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>/</kbd></td>
+                    <td>ver atajos de teclado</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>,</kbd></td>
+                    <td>selector de emojis</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>.</kbd></td>
+                    <td>selector de glifos</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>V</kbd></td>
+                    <td>portapapeles</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>V</kbd></td>
+                    <td>gestor de portapapeles</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>A</kbd></td>
+                    <td>selector de lanzadores Rofi</td>
+                  </tr>
+                </table>
+              </div>
+            </ion-accordion>
+
+            <div class="shortcut-category">
+              <h2>Controles de Hardware</h2>
+            </div>
+
+            <ion-accordion value="audio">
+              <ion-item slot="header" color="light">
+                <ion-label>Audio</ion-label>
+              </ion-item>
+              <div class="section" slot="content">
+                <table>
+                  <tr>
+                    <th>Teclas</th>
+                    <th>Acción</th>
+                  </tr>
+                  <tr>
+                    <td><kbd>F10</kbd> / <kbd>XF86AudioMute</kbd></td>
+                    <td>activar/desactivar silencio de salida</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>F11</kbd> / <kbd>XF86AudioLowerVolume</kbd></td>
+                    <td>bajar volumen</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>F12</kbd> / <kbd>XF86AudioRaiseVolume</kbd></td>
+                    <td>subir volumen</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>XF86AudioMicMute</kbd></td>
+                    <td>activar/desactivar silencio del micrófono</td>
+                  </tr>
+                </table>
+              </div>
+            </ion-accordion>
+
+            <ion-accordion value="multimedia">
+              <ion-item slot="header" color="light">
+                <ion-label>Multimedia</ion-label>
+              </ion-item>
+              <div class="section" slot="content">
+                <table>
+                  <tr>
+                    <th>Teclas</th>
+                    <th>Acción</th>
+                  </tr>
+                  <tr>
+                    <td><kbd>XF86AudioPlay</kbd></td>
+                    <td>reproducir</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>XF86AudioPause</kbd></td>
+                    <td>pausar</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>XF86AudioNext</kbd></td>
+                    <td>siguiente pista</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>XF86AudioPrev</kbd></td>
+                    <td>pista anterior</td>
+                  </tr>
+                </table>
+              </div>
+            </ion-accordion>
+
+            <ion-accordion value="brillo">
+              <ion-item slot="header" color="light">
+                <ion-label>Brillo</ion-label>
+              </ion-item>
+              <div class="section" slot="content">
+                <table>
+                  <tr>
+                    <th>Teclas</th>
+                    <th>Acción</th>
+                  </tr>
+                  <tr>
+                    <td><kbd>XF86MonBrightnessUp</kbd></td>
+                    <td>aumentar brillo</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>XF86MonBrightnessDown</kbd></td>
+                    <td>disminuir brillo</td>
+                  </tr>
+                </table>
+              </div>
+            </ion-accordion>
+
+            <div class="shortcut-category">
+              <h2>Utilidades</h2>
+            </div>
+
+            <ion-accordion value="otras_funciones">
+              <ion-item slot="header" color="light">
+                <ion-label>Otras Funciones</ion-label>
+              </ion-item>
+              <div class="section" slot="content">
+                <table>
+                  <tr>
+                    <th>Teclas</th>
+                    <th>Acción</th>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>K</kbd></td>
+                    <td>cambiar distribución del teclado</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>G</kbd></td>
+                    <td>modo juego</td>
+                  </tr>
+                </table>
+              </div>
+            </ion-accordion>
+
+            <ion-accordion value="captura">
+              <ion-item slot="header" color="light">
+                <ion-label>Captura de Pantalla</ion-label>
+              </ion-item>
+              <div class="section" slot="content">
+                <table>
+                  <tr>
+                    <th>Teclas</th>
+                    <th>Acción</th>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>P</kbd></td>
+                    <td>selector de color</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>P</kbd></td>
+                    <td>captura de pantalla</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>CTRL</kbd> + <kbd>P</kbd></td>
+                    <td>congelar y capturar pantalla</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>P</kbd></td>
+                    <td>imprimir monitor</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>Print</kbd></td>
+                    <td>capturar todos los monitores</td>
+                  </tr>
+                </table>
+              </div>
+            </ion-accordion>
+
+            <div class="shortcut-category">
+              <h2>Temas y Fondos de Pantalla</h2>
+            </div>
+
+            <ion-accordion value="fondo_estilos">
+              <ion-item slot="header" color="light">
+                <ion-label>Fondos y Estilos</ion-label>
+              </ion-item>
+              <div class="section" slot="content">
+                <table>
+                  <tr>
+                    <th>Teclas</th>
+                    <th>Acción</th>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>Derecha</kbd></td>
+                    <td>fondo siguiente</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>Izquierda</kbd></td>
+                    <td>fondo anterior</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>W</kbd></td>
+                    <td>seleccionar fondo</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>Arriba</kbd></td>
+                    <td>siguiente diseño de Waybar</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>Abajo</kbd></td>
+                    <td>diseño anterior de Waybar</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>R</kbd></td>
+                    <td>selector de modo Wallbash</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>T</kbd></td>
+                    <td>seleccionar tema</td>
+                  </tr>
+                </table>
+              </div>
+            </ion-accordion>
+
+            <div class="shortcut-category">
+              <h2>Espacios de Trabajo</h2>
+            </div>
+
+            <ion-accordion value="nav_espacios_trabajo">
+              <ion-item slot="header" color="light">
+                <ion-label>Navegación entre Espacios de Trabajo</ion-label>
+              </ion-item>
+              <div class="section" slot="content">
+                <table>
+                  <tr>
+                    <th>Teclas</th>
+                    <th>Acción</th>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>1</kbd></td>
+                    <td>ir al espacio de trabajo 1</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>2</kbd></td>
+                    <td>ir al espacio de trabajo 2</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>3</kbd></td>
+                    <td>ir al espacio de trabajo 3</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>4</kbd></td>
+                    <td>ir al espacio de trabajo 4</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>5</kbd></td>
+                    <td>ir al espacio de trabajo 5</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>6</kbd></td>
+                    <td>ir al espacio de trabajo 6</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>7</kbd></td>
+                    <td>ir al espacio de trabajo 7</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>8</kbd></td>
+                    <td>ir al espacio de trabajo 8</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>9</kbd></td>
+                    <td>ir al espacio de trabajo 9</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>0</kbd></td>
+                    <td>ir al espacio de trabajo 10</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>CTRL</kbd> + <kbd>Abajo</kbd></td>
+                    <td>ir al espacio de trabajo vacío más cercano</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>mouse_down</kbd></td>
+                    <td>ir al siguiente espacio de trabajo</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>mouse_up</kbd></td>
+                    <td>ir al espacio de trabajo anterior</td>
+                  </tr>
+                </table>
+              </div>
+            </ion-accordion>
+
+            <ion-accordion value="espacio_relativo">
+              <ion-item slot="header" color="light">
+                <ion-label>Espacios de Trabajo Relativos</ion-label>
+              </ion-item>
+              <div class="section" slot="content">
+                <table>
+                  <tr>
+                    <th>Teclas</th>
+                    <th>Acción</th>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>CTRL</kbd> + <kbd>Derecha</kbd></td>
+                    <td>cambiar al siguiente espacio de trabajo</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>CTRL</kbd> + <kbd>Izquierda</kbd></td>
+                    <td>cambiar al espacio de trabajo anterior</td>
+                  </tr>
+                </table>
+              </div>
+            </ion-accordion>
+
+            <ion-accordion value="espacio_especial">
+              <ion-item slot="header" color="light">
+                <ion-label>Espacio de Trabajo Especial</ion-label>
+              </ion-item>
+              <div class="section" slot="content">
+                <table>
+                  <tr>
+                    <th>Teclas</th>
+                    <th>Acción</th>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>S</kbd></td>
+                    <td>mover al espacio de trabajo especial (scratchpad)</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>S</kbd></td>
+                    <td>mover al scratchpad (modo silencioso)</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>S</kbd></td>
+                    <td>mostrar/ocultar scratchpad</td>
+                  </tr>
+                </table>
+              </div>
+            </ion-accordion>
+
+            <ion-accordion value="mov_ventana_silenciosa">
+              <ion-item slot="header" color="light">
+                <ion-label>Mover Ventana Silenciosamente</ion-label>
+              </ion-item>
+              <div class="section" slot="content">
+                <table>
+                  <tr>
+                    <th>Teclas</th>
+                    <th>Acción</th>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>1</kbd></td>
+                    <td>mover al espacio de trabajo 1 (silencioso)</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>2</kbd></td>
+                    <td>mover al espacio de trabajo 2 (silencioso)</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>3</kbd></td>
+                    <td>mover al espacio de trabajo 3 (silencioso)</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>4</kbd></td>
+                    <td>mover al espacio de trabajo 4 (silencioso)</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>5</kbd></td>
+                    <td>mover al espacio de trabajo 5 (silencioso)</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>6</kbd></td>
+                    <td>mover al espacio de trabajo 6 (silencioso)</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>7</kbd></td>
+                    <td>mover al espacio de trabajo 7 (silencioso)</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>8</kbd></td>
+                    <td>mover al espacio de trabajo 8 (silencioso)</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>9</kbd></td>
+                    <td>mover al espacio de trabajo 9 (silencioso)</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>0</kbd></td>
+                    <td>mover al espacio de trabajo 10 (silencioso)</td>
+                  </tr>
+                </table>
+              </div>
+            </ion-accordion>
+
+            <ion-accordion value="mov_ventana_esp_trab">
+              <ion-item slot="header" color="light">
+                <ion-label>Mover Ventana a un Espacio de Trabajo</ion-label>
+              </ion-item>
+              <div class="section" slot="content">
+                <table>
+                  <tr>
+                    <th>Teclas</th>
+                    <th>Acción</th>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>1</kbd></td>
+                    <td>mover al espacio de trabajo 1</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>2</kbd></td>
+                    <td>mover al espacio de trabajo 2</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>3</kbd></td>
+                    <td>mover al espacio de trabajo 3</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>4</kbd></td>
+                    <td>mover al espacio de trabajo 4</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>5</kbd></td>
+                    <td>mover al espacio de trabajo 5</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>6</kbd></td>
+                    <td>mover al espacio de trabajo 6</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>7</kbd></td>
+                    <td>mover al espacio de trabajo 7</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>8</kbd></td>
+                    <td>mover al espacio de trabajo 8</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>9</kbd></td>
+                    <td>mover al espacio de trabajo 9</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>0</kbd></td>
+                    <td>mover al espacio de trabajo 10</td>
+                  </tr>
+                </table>
+              </div>
+            </ion-accordion>
+
+            <ion-accordion value="mov_ventana_esp_relativo">
+              <ion-item slot="header" color="light">
+                <ion-label>Mover Ventana a Espacios Relativos</ion-label>
+              </ion-item>
+              <div class="section" slot="content">
+                <table>
+                  <tr>
+                    <th>Teclas</th>
+                    <th>Acción</th>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>CTRL</kbd> + <kbd>Derecha</kbd></td>
+                    <td>mover ventana al siguiente espacio relativo</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>SUPER</kbd> + <kbd>ALT</kbd> + <kbd>CTRL</kbd> + <kbd>Izquierda</kbd></td>
+                    <td>mover ventana al espacio relativo anterior</td>
+                  </tr>
+                </table>
+              </div>
+            </ion-accordion>
+          </ion-accordion-group>
         </ion-col>
       </ion-row>
     </ion-grid>
