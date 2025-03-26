@@ -1,43 +1,57 @@
 .body {
-    font-family: Arial, sans-serif;
-    margin: 30px 100px;
-    line-height: 1.6;
+  font-family: Arial, sans-serif;
+  margin: 30px 100px;
+  line-height: 1.6;
+  text-align: justify;
 }
-h1, h2, h3 {
-    color: #0056b3;
+
+h1,
+h2,
+h3 {
+  color: #0056b3;
 }
+
 pre {
-    background: #111010;
-    padding: 10px;
-    border-radius: 0 10px;
-    overflow-x: auto;
+  background: #111010;
+  padding: 10px;
+  border-radius: 0 10px;
+  overflow-x: auto;
 }
+
 code {
-    margin: 10px 30px;
-    font-family: "Courier New", Courier, monospace;
-    font-weight: bolder;
-    color: #ff2e2e;
+  margin: 10px 30px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bolder;
+  color: #ff2e2e;
 }
 
 .shortcuts {
-padding: 0 0 0 2rem;
+  padding: 0 0 0 2rem;
+
   .shortcut-category {
-    margin: 1rem 0;
-    padding: 0.5rem 1rem;
+    margin: 0rem 0 1.5rem;
+    padding: 0.75rem 1.25rem;
     background: linear-gradient(to right, #0056b3, #007bff);
     border-left: 6px solid #003d80;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 86, 179, 0.2);
-  
+
     h2 {
       margin: 0;
       font-size: 1.4rem;
       font-weight: bold;
       color: #fff;
-      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+
+      ion-icon {
+        font-size: 1.6rem;
+        color: #fff;
+      }
     }
   }
-  
+
   ion-accordion {
     margin-bottom: 1rem;
     border-radius: 6px;
@@ -86,7 +100,7 @@ padding: 0 0 0 2rem;
 
 /* Estilos específicos para dispositivos móviles (ejemplo: pantalla menor a 768px de ancho) */
 @media (max-width: 768px) {
-    .body {
-        margin: 0px 5%;
-    }
+  .body {
+    margin: 0px 5%;
+  }
 }
